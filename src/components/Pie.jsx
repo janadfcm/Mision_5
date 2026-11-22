@@ -25,7 +25,7 @@ export default function Pie() {
         </nav>
       </div>
       <p className="border-t border-slate-200 px-4 py-6 text-center text-sm text-slate-600 dark:border-tinta-700 dark:text-slate-400">
-        Atalaya es un producto inventado: landing de la Misión 5 de Programación Web I (U-tad, 2026-27).
+        we_are_root es un producto inventado: landing de la Misión 5 de Programación Web I (U-tad, 2026-27).
       </p>
     </footer>
   );

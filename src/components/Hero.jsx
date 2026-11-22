@@ -29,7 +29,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-slate-600 dark:text-slate-400">
-            Atalaya es una academia de hacking ético con laboratorios propios: practicas ataques reales contra máquinas
+            we_are_root es una academia de hacking ético con laboratorios propios: practicas ataques reales contra máquinas
             preparadas para ello y ves, en directo, cómo los detecta el equipo de defensa.
           </p>
 

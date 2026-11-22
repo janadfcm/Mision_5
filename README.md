@@ -1,10 +1,10 @@
-# Atalaya · Academia de hacking ético
+# we_are_root · Academia de hacking ético
 
 ## Descripción
 
-Landing page de **Atalaya**, una academia de hacking ético inventada. Está hecha con **React 19 + Vite** y **Tailwind CSS v4**: se adapta del móvil al escritorio, tiene modo oscuro y su sistema de diseño está definido en `@theme`.
+Landing page de **we_are_root**, una academia de hacking ético inventada. Está hecha con **React 19 + Vite** y **Tailwind CSS v4**: se adapta del móvil al escritorio, tiene modo oscuro y su sistema de diseño está definido en `@theme`.
 
-La idea visual sale del propio tema: **rojo para el ataque (Red Team), azul para la defensa (Blue Team) y púrpura donde los dos se encuentran (Purple Team)**. Esos tres colores son la marca: el logo es un escudo partido en rojo y azul, el degradado del *hero* va de rojo a azul, y el morado se usa para todo lo que no es de ningún bando (el foco del teclado, los antetítulos, el plan destacado). La tipografía es *Space Grotesk* para el texto y *JetBrains Mono* para los detalles «de terminal».
+El nombre juega con *root*, el superusuario de Linux, escrito como un nombre de usuario de terminal (en `font-mono` en el logo). La idea visual sale del propio tema: **rojo para el ataque (Red Team), azul para la defensa (Blue Team) y púrpura donde los dos se encuentran (Purple Team)**. Esos tres colores son la marca: el logo es un escudo partido en rojo y azul, el degradado del *hero* va de rojo a azul, y el morado se usa para todo lo que no es de ningún bando (el foco del teclado, los antetítulos, el plan destacado). La tipografía es *Space Grotesk* para el texto y *JetBrains Mono* para los detalles «de terminal».
 
 Secciones de la página:
 - cabecera fija con menú móvil y botón de tema;

@@ -7,7 +7,8 @@ export default function Logo() {
         <path d="M16 2l12 4.5v8.2C28 22 22.8 27.6 16 30Z" className="fill-defensa-600" />
         <path d="M11 16.5l3.5 3.5L21 12.5" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
       </svg>
-      <span className="text-xl">Atalaya</span>
+      {/* Nombre en mono, como un usuario de terminal. */}
+      <span className="font-mono text-lg">we_are_root</span>
     </a>
   );
 }
