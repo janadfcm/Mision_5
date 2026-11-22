@@ -1,5 +1,8 @@
 import Cabecera from "./components/Cabecera.jsx";
 import Hero from "./components/Hero.jsx";
+import Laboratorios from "./components/Laboratorios.jsx";
+import Metodo from "./components/Metodo.jsx";
+import Planes from "./components/Planes.jsx";
 import Rutas from "./components/Rutas.jsx";
 
 export default function App() {
@@ -17,6 +20,9 @@ export default function App() {
       <main id="contenido">
         <Hero />
         <Rutas />
+        <Metodo />
+        <Laboratorios />
+        <Planes />
       </main>
     </>
   );
