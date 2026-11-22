@@ -48,6 +48,25 @@
      las tarjetas → py-seccion, rounded-tarjeta */
   --spacing-seccion: 6rem;
   --radius-tarjeta: 1.25rem;
+
+  /* BONUS · animación de entrada. Un token --animate-* genera la utilidad
+     animate-aparecer, y sus @keyframes van DENTRO de @theme para que
+     Tailwind los incluya solo si la utilidad se usa.
+     "both": antes de empezar ya está en el estado "from" (invisible), así
+     el bloque con retraso no aparece un instante y luego se esconde. */
+  --animate-aparecer: aparecer 0.7s ease-out both;
+  --animate-aparecer-tarde: aparecer 0.7s ease-out 0.25s both;
+
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateY(1.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 /* Estilos base: lo que no es una utilidad de un elemento concreto. */

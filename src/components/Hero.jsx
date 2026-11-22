@@ -13,7 +13,9 @@ export default function Hero() {
       {/* Grid: en móvil, una columna (texto y luego terminal);
           desde lg, dos columnas una al lado de la otra. */}
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 md:py-seccion lg:grid-cols-2 lg:px-8">
-        <div>
+        {/* motion-safe: solo se anima si el usuario NO ha pedido reducir el
+            movimiento en su sistema (prefers-reduced-motion). */}
+        <div className="motion-safe:animate-aparecer">
           <p className="inline-flex items-center gap-2 rounded-full border border-purpura-600/30 bg-white/70 px-3 py-1 font-mono text-xs font-semibold text-purpura-700 dark:bg-tinta-800 dark:text-purpura-300">
             <span aria-hidden="true" className="size-2 rounded-full bg-purpura-600 dark:bg-purpura-300" />
             Plazas abiertas · enero 2027
@@ -68,7 +70,7 @@ function Terminal() {
     <div
       role="img"
       aria-label="Terminal de ejemplo: un escaneo de puertos desde el lado de ataque y la alerta que genera en el lado de defensa"
-      className="overflow-hidden rounded-tarjeta border border-tinta-700 bg-tinta-950 font-mono text-sm shadow-2xl shadow-purpura-600/20"
+      className="overflow-hidden rounded-tarjeta border border-tinta-700 bg-tinta-950 font-mono text-sm shadow-2xl shadow-purpura-600/20 motion-safe:animate-aparecer-tarde"
     >
       <div className="flex items-center gap-2 border-b border-tinta-700 px-4 py-3">
         <span className="size-3 rounded-full bg-ataque-600" />
