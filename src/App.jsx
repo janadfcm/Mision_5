@@ -1,9 +1,13 @@
 import Cabecera from "./components/Cabecera.jsx";
 import Hero from "./components/Hero.jsx";
 import Laboratorios from "./components/Laboratorios.jsx";
+import LlamadaFinal from "./components/LlamadaFinal.jsx";
 import Metodo from "./components/Metodo.jsx";
+import Pie from "./components/Pie.jsx";
 import Planes from "./components/Planes.jsx";
+import Preguntas from "./components/Preguntas.jsx";
 import Rutas from "./components/Rutas.jsx";
+import Testimonios from "./components/Testimonios.jsx";
 
 export default function App() {
   return (
@@ -23,7 +27,11 @@ export default function App() {
         <Metodo />
         <Laboratorios />
         <Planes />
+        <Testimonios />
+        <Preguntas />
+        <LlamadaFinal />
       </main>
+      <Pie />
     </>
   );
 }

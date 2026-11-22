@@ -107,3 +107,42 @@ export const PLANES = [
     destacado: false,
   },
 ];
+
+// Personas inventadas: es un producto ficticio.
+export const TESTIMONIOS = [
+  {
+    texto: "Venía de programar webs y nunca había pensado en cómo se rompen. El laboratorio de la tienda vulnerable me cambió la forma de escribir consultas.",
+    nombre: "Lucía M.",
+    rol: "Ruta Red Team · desarrolladora",
+  },
+  {
+    texto: "Lo mejor es ver las dos caras: lanzas el ataque y a los diez segundos ves la alerta que ha saltado en el SIEM del otro equipo.",
+    nombre: "Andrés P.",
+    rol: "Ruta Purple Team · estudiante de ingeniería",
+  },
+  {
+    texto: "Pasé de mirar registros sin entender nada a escribir mis propias reglas de detección. Los informes corregidos valen oro.",
+    nombre: "Nerea G.",
+    rol: "Ruta Blue Team · técnica de sistemas",
+  },
+];
+
+export const PREGUNTAS = [
+  {
+    pregunta: "¿Esto es legal?",
+    respuesta:
+      "Sí, porque todo ocurre en laboratorios nuestros, preparados para ser atacados. Lo que aprendes aquí solo se puede usar fuera con permiso por escrito del dueño del sistema; atacar sistemas ajenos sin autorización es delito.",
+  },
+  {
+    pregunta: "¿Necesito saber programar?",
+    respuesta: "Para la ruta Blue Team, no. Para Red y Purple ayuda conocer algo de Linux y de cómo funciona una web, y lo repasamos en las primeras semanas.",
+  },
+  {
+    pregunta: "¿Qué ordenador necesito?",
+    respuesta: "Cualquiera con navegador moderno: los laboratorios corren en nuestros servidores, no en tu equipo.",
+  },
+  {
+    pregunta: "¿Puedo cambiar de ruta?",
+    respuesta: "Sí, en el plan Operativo puedes cambiar de ruta una vez al mes sin perder lo que ya has completado.",
+  },
+];
