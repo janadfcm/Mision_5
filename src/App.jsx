@@ -1,4 +1,6 @@
 import Cabecera from "./components/Cabecera.jsx";
+import Hero from "./components/Hero.jsx";
+import Rutas from "./components/Rutas.jsx";
 
 export default function App() {
   return (
@@ -13,7 +15,8 @@ export default function App() {
       </a>
       <Cabecera />
       <main id="contenido">
-        <p className="mx-auto max-w-6xl px-4 py-seccion">En construcción.</p>
+        <Hero />
+        <Rutas />
       </main>
     </>
   );
