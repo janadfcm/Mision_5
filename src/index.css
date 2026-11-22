@@ -89,9 +89,13 @@
   :focus-visible {
     outline: 3px solid var(--color-purpura-600);
     outline-offset: 3px;
-  }
-  html.dark :focus-visible {
-    outline-color: var(--color-purpura-300);
+
+    /* @variant dark aplica la MISMA variante que dark: en las clases
+       (la de @custom-variant de arriba), en vez de repetir el selector
+       a mano con html.dark. */
+    @variant dark {
+      outline-color: var(--color-purpura-300);
+    }
   }
   /* Las anclas (#rutas…) no quedan tapadas por la cabecera fija. */
   section[id] {
