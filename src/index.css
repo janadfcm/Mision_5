@@ -1,2 +1,81 @@
 /* Tailwind v4: una sola línea sustituye a @tailwind base/components/utilities. */
 @import "tailwindcss";
+
+/* Modo oscuro manual: dark: se activa cuando <html> (o un ancestro) tiene
+   la clase "dark". Sin esta línea, dark: seguiría la preferencia del sistema
+   y el botón de tema no podría cambiarlo. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─────────────────────────────────────────────────────────────────────
+   SISTEMA DE DISEÑO (tokens). Cada variable genera utilidades
+   (--color-ataque-600 → bg-ataque-600, text-ataque-600…) y además queda
+   como variable CSS en :root (var(--color-ataque-600)).
+   Contrastes comprobados con la fórmula WCAG (ver README):
+   texto blanco sobre los 600 ≥ 5,3:1; los 700 sobre papel ≥ 6,8:1;
+   los 300 sobre tinta ≥ 8:1.
+   ───────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Ataque (Red Team) */
+  --color-ataque-50: #fff1f1;
+  --color-ataque-300: #ff9a9e;
+  --color-ataque-600: #c8323a;
+  --color-ataque-700: #a3242b;
+
+  /* Defensa (Blue Team) */
+  --color-defensa-50: #eef5ff;
+  --color-defensa-300: #8cbcff;
+  --color-defensa-600: #1d5fd1;
+  --color-defensa-700: #174ea6;
+
+  /* Púrpura (Purple Team): donde ataque y defensa se encuentran */
+  --color-purpura-50: #f4efff;
+  --color-purpura-300: #c4a8ff;
+  --color-purpura-600: #6d3fd6;
+  --color-purpura-700: #5a2fb8;
+
+  /* Fondos: papel (claro) y tinta (oscuro) */
+  --color-papel: #f7f5f0;
+  --color-tinta-700: #1c2233;
+  --color-tinta-800: #131826;
+  --color-tinta-950: #0b0d14;
+
+  /* Tipografías: cargadas desde Google Fonts en index.html. Si fallan,
+     se usa la siguiente fuente de la lista. */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Tokens con nombre: separación vertical entre secciones y radio de
+     las tarjetas → py-seccion, rounded-tarjeta */
+  --spacing-seccion: 6rem;
+  --radius-tarjeta: 1.25rem;
+}
+
+/* Estilos base: lo que no es una utilidad de un elemento concreto. */
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+  html.dark {
+    /* Barras de desplazamiento y controles nativos en oscuro. */
+    color-scheme: dark;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  /* Foco visible en TODO lo interactivo (solo con teclado). Morado: no es
+     ni ataque ni defensa, y contrasta ≥ 5,7:1 en los dos temas. */
+  :focus-visible {
+    outline: 3px solid var(--color-purpura-600);
+    outline-offset: 3px;
+  }
+  html.dark :focus-visible {
+    outline-color: var(--color-purpura-300);
+  }
+  /* Las anclas (#rutas…) no quedan tapadas por la cabecera fija. */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+}

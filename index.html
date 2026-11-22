@@ -4,9 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Atalaya, academia de hacking ético: aprende a atacar y a defender en laboratorios propios y autorizados." />
     <title>Atalaya · Academia de hacking ético</title>
+
+    <!-- Fuentes de @theme (--font-display y --font-mono). Sin esto, los
+         nombres existirían pero el navegador usaría la siguiente de la lista. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tema ANTES de pintar: si se esperase a React, la página se vería un
+         instante en claro y luego saltaría a oscuro (parpadeo). -->
+    <script>
+      try {
+        const guardado = localStorage.getItem("tema");
+        const oscuro = guardado
+          ? guardado === "oscuro"
+          : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", oscuro);
+      } catch {
+        /* sin localStorage: se queda en claro */
+      }
+    </script>
   </head>
-  <body>
+  <body class="bg-papel font-display text-slate-800 antialiased dark:bg-tinta-950 dark:text-slate-300">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

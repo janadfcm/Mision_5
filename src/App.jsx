@@ -1,7 +1,20 @@
+import Cabecera from "./components/Cabecera.jsx";
+
 export default function App() {
   return (
-    <main className="grid min-h-screen place-items-center bg-slate-100">
-      <h1 className="text-3xl font-bold text-center">Atalaya · Academia de hacking ético</h1>
-    </main>
+    <>
+      {/* Enlace para saltar la navegación con el teclado: invisible hasta
+          que recibe el foco (sr-only → focus:not-sr-only). */}
+      <a
+        href="#contenido"
+        className="sr-only z-50 rounded-lg bg-purpura-600 px-4 py-2 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >
+        Saltar al contenido
+      </a>
+      <Cabecera />
+      <main id="contenido">
+        <p className="mx-auto max-w-6xl px-4 py-seccion">En construcción.</p>
+      </main>
+    </>
   );
 }
