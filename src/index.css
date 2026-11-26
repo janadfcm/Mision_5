@@ -50,7 +50,7 @@
   --radius-tarjeta: 1.25rem;
 
   /* BONUS · animación de entrada. Un token --animate-* genera la utilidad
-     animate-aparecer, y sus @keyframes van DENTRO de @theme para que
+     animate-aparecer, y sus keyframes van DENTRO del bloque theme para que
      Tailwind los incluya solo si la utilidad se usa.
      "both": antes de empezar ya está en el estado "from" (invisible), así
      el bloque con retraso no aparece un instante y luego se esconde. */
