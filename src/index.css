@@ -90,9 +90,10 @@
     outline: 3px solid var(--color-purpura-600);
     outline-offset: 3px;
 
-    /* @variant dark aplica la MISMA variante que dark: en las clases
-       (la de @custom-variant de arriba), en vez de repetir el selector
-       a mano con html.dark. */
+    /* La directiva variant dark aplica la MISMA variante que dark: en las
+       clases (la definida con custom-variant arriba), en vez de repetir el
+       selector a mano con html.dark. Sin arroba en este comentario: la
+       extensión de VS Code lo confunde con la directiva y marca un error. */
     @variant dark {
       outline-color: var(--color-purpura-300);
     }
