@@ -141,11 +141,11 @@ Los tokens `--animate-*` generan las utilidades `animate-aparecer` y `animate-ap
 
 **Herramienta:** Claude Code (en la terminal, sobre el repositorio).
 
-**Qué delegué:** la IA escribió el código (componentes, `@theme`, modo oscuro, animación) y este README. Yo elegí el tema entre varias tandas de propuestas (quería algo de ciberseguridad), la idea de Red Team / Blue Team y la carpeta del proyecto. Después repasé el código con la IA por partes.
+**Qué delegué:** la IA escribió el código (componentes, `@theme`, modo oscuro, animación) y este README. Yo elegí el tema, la idea de Red Team / Blue Team y la carpeta del proyecto. Después repasé el código con la IA por partes y con explicaciones por cada bloque de código.
 
 **Prompts reales:**
 - «me gustaria que fuese algo relacionado con la ciberseguridad», y de las propuestas elegí la academia de hacking ético.
-- «si ahí, hazla tú como la M4»
+- «si ahí, hazla como la M4»
 
 **Cómo lo verifiqué:**
 - `npm run lint` sin avisos y `npm run build` sin errores.
